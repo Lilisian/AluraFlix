@@ -47,6 +47,15 @@ const Input = styled.input`
   background-color: rgba(234, 248, 232, 0.5);
 `;
 
+const Select = styled.select`
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: rgba(234, 248, 232, 0.5);
+`;
+
 const TextArea = styled.textarea`
   width: 100%;
   padding: 8px;
@@ -98,6 +107,8 @@ const Modal = ({ isOpen, onClose, image, onSave }) => {
     video: '',
     descripcion: '',
   });
+
+  const categories = ["Front End", "Back End", "Innovación y Gestión"];
 
   useEffect(() => {
     if (image) {
@@ -151,12 +162,16 @@ const Modal = ({ isOpen, onClose, image, onSave }) => {
           />
 
           <Label>Categoría:</Label>
-          <Input
-            type="text"
+          <Select
             name="categoria"
             value={formData.categoria}
             onChange={handleChange}
-          />
+          >
+            <option value="">Seleccione una categoría</option>
+            {categories.map((category) => (
+              <option key={category} value={category}>{category}</option>
+            ))}
+          </Select>
 
           <Label>Imagen:</Label>
           <Input

@@ -34,13 +34,13 @@ const HeaderEstilizado = styled.header`
     }
 `;
 
-const Header = () => {
+const Header = ({ onNuevoVideoClick, onHomeClick }) => {
     return (
         <HeaderEstilizado>
             <img src="imagenes/LogoMain.png" alt="Logo AluraFlix"/>
             <div className="buttons">
-                <button>Home</button>
-                <button>Nuevo video</button>
+                <button onClick={onHomeClick}>Home</button>
+                <button onClick={onNuevoVideoClick}>Nuevo video</button>
             </div>
         </HeaderEstilizado>
     );
