@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Header from './Header';
-import Footer from './Footer';
 import styled from 'styled-components';
 
 const MainContainer = styled.div`
@@ -31,6 +29,14 @@ const Input = styled.input`
   border: 1px solid #ddd;
   border-radius: 4px;
 `;
+
+const Select = styled.select`
+  margin-bottom: 20px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+`;
+
 
 const TextArea = styled.textarea`
   margin-bottom: 20px;
@@ -82,8 +88,13 @@ const NuevoVideo = ({ onAddVideo }) => {
         <Label>Título:</Label>
         <Input type="text" name="titulo" value={formData.titulo} onChange={handleChange} />
 
-        <Label>Categoría:</Label>
-        <Input type="text" name="categoria" value={formData.categoria} onChange={handleChange} />
+        <Label>Categoría:</Label> 
+        <Select name="categoria" value={formData.categoria} onChange={handleChange}>
+          <option value="">Seleccione una categoría</option>
+          <option value="Front End">Front End</option>
+          <option value="Back End">Back End</option>
+          <option value="Innovación y Gestión">Innovación y Gestión</option>
+        </Select>
 
         <Label>Imagen:</Label>
         <Input type="text" name="imagen" value={formData.imagen} onChange={handleChange} />
