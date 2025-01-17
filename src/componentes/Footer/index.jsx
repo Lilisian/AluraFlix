@@ -3,7 +3,7 @@ import logo from '/imagenes/LogoMain.png';
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;

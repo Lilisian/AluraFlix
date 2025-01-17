@@ -1,46 +1,55 @@
 {
-    "images": {
+  "images": {
         "backend": [
             {
+               "id": 1,
                 "name": "enum.png",
                 "path": "/public/imagenes/backend/enum.png"
             },
             {
+                "id": 2,
                 "name": "spring.png",
                 "path": "/public/imagenes/backend/spring.png"
             },
             {
+                "id": 3,
                 "name": "sql.png",
                 "path": "/public/imagenes/backend/sql.png"
             }
         ],
         "frontend": [
             {
+                "id": 4,
                 "name": "equipo front.png",
                 "path": "/public/imagenes/frontend/equipo front.png"
             },
             {
+                "id": 5,
                 "name": "javascript.png",
                 "path": "/public/imagenes/frontend/javascript.png"
             },
             {
-                "name": "let,var y const.png",
-                "path": "/public/imagenes/frontend/let,var y const.png"
+                "id": 6,
+                "name": "funciones",
+                "path": "/public/imagenes/frontend/funciones.png"
             }
         ],
         "innovacion y gestion": [
             {
+                "id": 7,
                 "name": "metodologias.png",
                 "path": "/public/imagenes/innovacion y gestion/metodologias.png"
             },
             {
+                "id": 8,
                 "name": "soft skills (2).png",
                 "path": "/public/imagenes/innovacion y gestion/soft skills (2).png"
             },
             {
+                "id": 9,
                 "name": "soft skills.png",
                 "path": "/public/imagenes/innovacion y gestion/soft skills.png"
-            }
+  }
         ]
     }
 }
