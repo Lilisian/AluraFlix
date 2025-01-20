@@ -43,10 +43,15 @@ const App = () => {
     setCategories((prevCategories) => {
       const updatedCategories = { ...prevCategories };
       const categoryKey = updatedImage.categoria.toLowerCase();
-      const index = updatedCategories[categoryKey].findIndex(img => img.id === updatedImage.id);
-      if (index !== -1) {
-        updatedCategories[categoryKey][index] = updatedImage;
+      
+      // Aseguramos que la categoría esté definida
+      if (updatedCategories[categoryKey]) {
+        const index = updatedCategories[categoryKey].findIndex(img => img.id === updatedImage.id);
+        if (index !== -1) {
+          updatedCategories[categoryKey][index] = updatedImage;
+        }
       }
+      
       return updatedCategories;
     });
     setImageData(updatedImage);
@@ -63,6 +68,8 @@ const App = () => {
     setCategories((prevCategories) => {
       const updatedCategories = { ...prevCategories };
       const categoryKey = newVideo.categoria.toLowerCase();
+
+      // Aseguramos que la categoría esté definida
       if (updatedCategories[categoryKey]) {
         updatedCategories[categoryKey].push(videoWithId);
       }
@@ -132,3 +139,4 @@ const App = () => {
 };
 
 export default App;
+

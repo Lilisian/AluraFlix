@@ -32,6 +32,23 @@ const HeaderEstilizado = styled.header`
         display: flex;
         gap: 20px;
     }
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+
+        .buttons {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+        }
+    }
 `;
 
 const Header = ({ onNuevoVideoClick, onHomeClick }) => {

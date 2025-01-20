@@ -90,7 +90,7 @@ const NuevoVideo = ({ onAddVideo }) => {
 
         <Label>Categoría:</Label> 
         <Select name="categoria" value={formData.categoria} onChange={handleChange}>
-          <option value="">Seleccione una categoría</option>
+        <option value="" disabled defaultValue="" hidden>Seleccionar equipo</option>
           <option value="Front End">Front End</option>
           <option value="Back End">Back End</option>
           <option value="Innovación y Gestión">Innovación y Gestión</option>

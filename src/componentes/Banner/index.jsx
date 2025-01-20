@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const FigureEstilizada = styled.figure`
+const FigureEstilizado = styled.figure`
   background-image: ${props => `url(${props.$backgroundImage})`};
   display: flex;
   flex-direction: column;
@@ -12,6 +12,11 @@ const FigureEstilizada = styled.figure`
   background-size: cover;
   background-position: center;
   padding: 20px; 
+
+  @media (max-width: 768px) {
+    min-height: 300px;
+    padding: 10px;
+  }
 `;
 
 const ContenedorFlex = styled.div`
@@ -20,12 +25,23 @@ const ContenedorFlex = styled.div`
   justify-content: space-between; 
   align-items: flex-end; 
   width: 100%;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const ContenidoTexto = styled.div`
   display: flex;
   flex-direction: column; 
   max-width: 70%; 
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 const TituloEstilizado = styled.p`
@@ -33,17 +49,30 @@ const TituloEstilizado = styled.p`
   color: #ffffff;
   max-width: 600px;
   margin-top: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const BannerTitle = styled.h2`
   color: #ffffff;
   font-size: 46px;
   margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
 `;
 
 const HighlightBoxes = styled.div`
   display: flex;
   margin: 10px 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const HighlightBox = styled.div`
@@ -59,6 +88,12 @@ const HighlightBox = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      font-size: 24px;
+      padding: 10px;
+    }
 `;
 
 const ImagenEstilizada = styled.img`
@@ -67,11 +102,16 @@ const ImagenEstilizada = styled.img`
   height: auto;
   border-radius: 8px;
   margin-left: 20px; 
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+  }
 `;
 
 const Banner = ({ texto, backgroundImage, titulo, Highlight, imagen }) => {
   return (
-    <FigureEstilizada $backgroundImage={backgroundImage}>
+    <FigureEstilizado $backgroundImage={backgroundImage}>
       <ContenedorFlex>
         <ContenidoTexto>
           <HighlightBoxes>
@@ -82,7 +122,7 @@ const Banner = ({ texto, backgroundImage, titulo, Highlight, imagen }) => {
         </ContenidoTexto>
         {imagen && <ImagenEstilizada src={imagen} alt="Imagen del banner" />}
       </ContenedorFlex>
-    </FigureEstilizada>
+    </FigureEstilizado>
   );
 };
 
