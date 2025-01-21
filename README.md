@@ -1,8 +1,27 @@
-# React + Vite
+# AluraFlix
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción del Proyecto
+AluraFlix es una plataforma de streaming que permite a los usuarios explorar y ver una variedad de videos educativos y de entretenimiento. La aplicación está diseñada para ser intuitiva y fácil de usar, ofreciendo una experiencia de usuario fluida. Este proyecto es parte de un desafío del programa Oracle Next Education (ONE).
 
-Currently, two official plugins are available:
+## Herramientas y Tecnologías Utilizadas
+- React
+- Vite
+- Styled-components
+- JavaScript
+- HTML
+- CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instalación
+Para instalar las dependencias del proyecto, ejecute el siguiente comando:
+```
+npm install
+```
+
+## Uso
+Para iniciar el proyecto, ejecute:
+```
+npm run dev
+```
+
+## Contribuciones
+Las contribuciones son bienvenidas. Si desea contribuir, por favor haga un fork del repositorio y envíe un pull request.
